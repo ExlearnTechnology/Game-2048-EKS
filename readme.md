@@ -16,7 +16,7 @@ AWS Application Load Balancer (ALB)
 EKS Ingress (ingress-2048)
    │
    ▼
-Kubernetes Service (service-2048 — NodePort)
+Kubernetes Service (service-2048 — ClusterIP)
    │
    ▼
 Kubernetes Deployment (deployment-2048 — 2 replicas)
@@ -272,7 +272,7 @@ spec:
   - port: 80
     targetPort: 80
     protocol: TCP
-  type: NodePort
+  type: ClusterIP
   selector:
     app.kubernetes.io/name: app-2048
 ---

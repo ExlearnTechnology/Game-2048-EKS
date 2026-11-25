@@ -4,7 +4,7 @@ metadata:
   name: service-2048
   namespace: game-2048
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app.kubernetes.io/name: app-2048
   ports:
